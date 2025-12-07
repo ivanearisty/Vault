@@ -1,3 +1,7 @@
+## Amendment Purpose
+
+Based on your memos and what we discussed on Wednesday, we have drafted a revised version of the HW. This reflects the reduced scope (e.g., single-list ticketing) and the specific architectural flow the professor described (using the AI as a translation layer between human text and API calls).
+
 ## Introduction
 
 We have arrived at the final stretch of the semester. While we call these "homeworks," you have likely realized by now that they are actually iterative sprints in a larger engineering project.
@@ -48,7 +52,7 @@ Furthermore, your deployed application must emit **telemetry data**. This is non
 
 You should use a monitoring or observability platform to collect and visualize this data.
 
-I recommend that you have a working version of this by the [[HW 3 real#Second Submission]] deadline
+I recommend that you have a working version of this by the [[HW 3 v1#Second Submission]] deadline
 #### Interface Deliverable
 
 Your first task is to collaborate within your vertical (Chat, Tickets, AI) to define a standardized API that all teams in that vertical will implement. This shared interface is crucial, as it will be the contract that the other two verticals depend on to integrate your system.
