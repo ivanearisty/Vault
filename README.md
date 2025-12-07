@@ -1,0 +1,1 @@
+My entire Obsidian vault with all my notes for classes, projects, and ideas. Books and Client Work removed for privacy.
