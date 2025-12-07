@@ -1,0 +1,244 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[
+]{article}
+\usepackage{xcolor}
+\usepackage{amsmath,amssymb}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={HW 3 v1},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{HW 3 v1}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+\subsection{The Assignment}\label{the-assignment}
+
+\subsubsection{Overview}\label{overview}
+
+Up until now, you have built isolated components: a Chat service, a
+Ticketing service, or an AI service. In this final phase, you are not
+building new features from scratch. Instead, you are acting as a
+\textbf{Systems Integrator}.
+
+Your goal is to assemble these components into a single, cohesive
+pipeline that allows a user in a chat interface to manage work tickets
+using natural language.
+
+The final product must be able to:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Answer questions} by leveraging an AI model.
+\item
+  \textbf{Fetch and summarize tickets} from a ticketing system (e.g.,
+  "Show me my 3 most recent open tickets").
+\item
+  \textbf{Take action on tickets} (e.g., "Close this ticket").
+\end{itemize}
+
+\subsubsection{User Flow}\label{user-flow}
+
+Here is the specific workflow your deployed application must support:
+
+\begin{enumerate}
+\tightlist
+\item
+  \textbf{Input:} User types a command in Chat (e.g., \emph{"Create a
+  ticket for fixing the login bug"}).
+\item
+  \textbf{Routing:} The Chat application sends this text to the AI
+  Service.
+\item
+  \textbf{Reasoning:} The AI Service analyzes the text, determines the
+  intent (\texttt{create\_ticket}), extracts the data
+  (\texttt{title="Fix\ login\ bug"}), and returns a structured tool
+  call.
+\item
+  \textbf{Execution:} The application executes this call against the
+  standardized Ticket Interface.
+\item
+  \textbf{Response:} The Ticket Service confirms the action, and the
+  Chat Interface relays the success message back to the user.
+\end{enumerate}
+
+\subsubsection{Instructions}\label{instructions}
+
+The core steps are:
+
+\begin{enumerate}
+\tightlist
+\item
+  \textbf{Integration:} Your primary task is to make three disparate
+  systems---Chat, Tickets, and AI---communicate effectively.
+\item
+  \textbf{Deployment:} This is not a local-only project. You will deploy
+  your application and manage its infrastructure as code.
+\item
+  \textbf{Observability:} Your deployed application must emit telemetry
+  data to monitor its health and performance.
+\end{enumerate}
+
+\paragraph{Interface}\label{interface}
+
+\href{https://github.com/ivanearisty/OSS-APIs}{Repository}
+
+\paragraph{IoC \& Telemetry}\label{ioc-telemetry}
+
+Your application must be deployed, and its infrastructure must be
+managed using an \textbf{Infrastructure as Code (IaC)} tool like
+Terraform or AWS CloudFormation. You are responsible for provisioning
+the necessary resources (e.g., servers, databases, environment
+variables) in a repeatable and automated way.
+
+Furthermore, your deployed application must emit \textbf{telemetry
+data}. This is non-negotiable and critical for understanding the
+performance of a live service. You must implement monitoring for:
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Request Latency:} How long does each API call or user
+  interaction take?
+\item
+  \textbf{Success Rate:} What percentage of requests are completed
+  successfully?
+\item
+  \textbf{Failure Rate:} What percentage of requests result in errors?
+\end{itemize}
+
+You should use a monitoring or observability platform to collect and
+visualize this data.
+
+I recommend that you have a working version of this by the HW 3 Amended
+\textgreater{} Second Submission deadline
+
+\paragraph{First submission}\label{first-submission}
+
+By the turn of the month, your individual team\textquotesingle s project
+must be refactored to implement the shared, standardized API for your
+vertical. This is a hard deadline, as other teams will be depending on
+this standardized interface for the next phase.
+
+\paragraph{Second Submission}\label{second-submission}
+
+Choose \textbf{one} of the other two verticals (either Tickets or AI)
+and integrate their system into your project. For example, if you are a
+Chat team, you might integrate an AI system first. Your submission must:
+
+\begin{itemize}
+\tightlist
+\item
+  Demonstrate successful integration with at least two different
+  providers from that vertical (e.g., a Chat bot working with both
+  OpenAI and Gemini).
+\item
+  Include integration tests that verify the two systems are working
+  together correctly.
+\end{itemize}
+
+I recommend you also have your IoC and Telemetry setup by now.
+
+\paragraph{Final Submission}\label{final-submission}
+
+This is the final deliverable. It includes your complete, three-part
+system, documentation, and a video demonstration.
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Pull Request:} A clean, well-documented PR with your final
+  code.
+\item
+  \textbf{Video Demonstration:} You must record a video that includes:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    A clear explanation, in your own words, of how your complete project
+    works.
+  \item
+    A live demonstration of its functionality, showcasing integration
+    with different providers (e.g., swapping Jira for Trello).
+  \item
+    A walkthrough of your CircleCI deployment pipeline.
+  \item
+    An explanation of the tests being run on the cloud.
+  \item
+    A high-level overview of your end-to-end (e2e) and integration tests
+    and what they verify.
+  \item
+    A view of your telemetry dashboard showing request latency and
+    success/failure rates.
+  \end{itemize}
+\end{itemize}
+
+\subsubsection{Deadlines}\label{deadlines}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{11/21:} Draft of this assignment is provided.
+\item
+  \textbf{11/26:} Draft is frozen.
+\item
+  \textbf{12/27 - Interface Deliverable:} Verticals must submit their
+  agreed-upon shared interface memo and individual team alignment plans.
+\item
+  \textbf{12/8 - First Submission:} All teams must have their code
+  aligned with the shared API.
+\item
+  \textbf{12/12 - Second Submission:} First cross-vertical integration
+  is complete.
+\item
+  \textbf{12/14:} Peer feedback and TA feedback on the first
+  integration.
+\item
+  \textbf{12/19 - Final Submission:} Final project, including the video
+  demonstration, is submitted.
+\end{itemize}
+
+\end{document}

@@ -52,7 +52,7 @@ Furthermore, your deployed application must emit **telemetry data**. This is non
 
 You should use a monitoring or observability platform to collect and visualize this data.
 
-I recommend that you have a working version of this by the [[HW 3 v1#Second Submission]] deadline
+I recommend that you have a working version of this by the [[HW 3 v2#Second Submission]] deadline
 #### Interface Deliverable
 
 Your first task is to collaborate within your vertical (Chat, Tickets, AI) to define a standardized API that all teams in that vertical will implement. This shared interface is crucial, as it will be the contract that the other two verticals depend on to integrate your system.

@@ -21,14 +21,6 @@ Here is the specific workflow your deployed application must support:
 4.  **Execution:** The application executes this call against the standardized Ticket Interface.
 5.  **Response:** The Ticket Service confirms the action, and the Chat Interface relays the success message back to the user.
 
-### Engineering Requirements
-Because the feature set is small, the **engineering rigor must be high**.
-*   **It must be live:** Deployed to the cloud (e.g., Render, AWS, GCP).
-*   **It must be automated:** Infrastructure provisioned via Terraform/IaC.
-*   **It must be observable:** You need dashboards showing latency and error rates.
-
-**In short:** Build a simple bot, but build it with the architecture and tooling of a production-grade enterprise system.
-
 ### Instructions
 
 The core steps are:
@@ -36,6 +28,14 @@ The core steps are:
 1. **Integration:** Your primary task is to make three disparate systems—Chat, Tickets, and AI—communicate effectively.
 2.  **Deployment:** This is not a local-only project. You will deploy your application and manage its infrastructure as code.
 3.  **Observability:** Your deployed application must emit telemetry data to monitor its health and performance.
+
+#### Interface 
+
+To streamline the interfaces, we created a repository containing the ABCs that will serve as the standard for each vertical.
+
+You should look at this repo immediately: [OSS-APIs](https://github.com/ivanearisty/OSS-APIs/tree/main)
+
+This is now the single source of truth. However, I don't know your projects better than you do. If you spot an error, or if you simply don't like a specific design choice, **fork the repo and submit a PR.** Rationalized changes are welcome.
 
 #### IoC & Telemetry
 
