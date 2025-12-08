@@ -40,7 +40,6 @@ Since $(C-2I) \neq 0$, $m_C(x) \neq x-2$. Therefore, it must be the next power.
 
 $m_C(x) = (x-2)^2$
 
----
 
 ### Matrix 4 $D = \begin{pmatrix} 2 & 0 & 0 \\ 0 & 2 & 1 \\ 0 & 0 & 2 \end{pmatrix}$
 
