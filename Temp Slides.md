@@ -123,20 +123,6 @@ We have a working pipeline, finished inference on all of our data, and a functio
 
 ---
 
-### Frontend Core
-
-<small>
-
-**Core Capabilities:**
-1.  **Temporal Slider:** Smooth transition between 2014, 2016, and 2018.
-2.  **Change Summary:** Real-time diffing (Added vs. Removed vs. Unchanged segments).
-3.  **Metrics Dashboard:** Charts visualizing net growth in infrastructure length.
-4.  **Validation Dashboard:** Runs validation of model outputs vs accepted data.
-
-</small>
-
----
-
 ![[Screenshot 2025-12-01 at 7.26.41 PM.png]]
 
 ---
@@ -145,7 +131,7 @@ We have a working pipeline, finished inference on all of our data, and a functio
 
 <small>
 
-1.  **Performance:** General improvements to speed when loading things in.
+1.  **Real Data:** Find a way to get validation data that is not just 2 years.
 2.  **Control:** Add user defined controls for spatial tolerance parameters in the UI.
 3.  **Control pt2:** Drag and drop shapefiles that take stuff from user.
 
