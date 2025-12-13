@@ -10,6 +10,39 @@ Here is the "Must-Know" list for Lectures 8–13, filtered for exam relevance.
 * **Corollary 8.22 (Inverse Formula):** Know that $A^{-1} = \frac{1}{\det(A)} (\text{Cof}(A))^t$. [cite_start]You might need this for symbolic inverses[cite: 1538].
 * [cite_start]**Skip:** The Leibniz formula (Theorem 8.1) and the bubble sort proof (Lemma 8.4)[cite: 1390, 1407].
 
+Based on Lecture 8, there are two primary practical methods for calculating the determinant, plus a shortcut for special block matrices.
+
+### 1. Row Reduction (Gaussian Elimination)
+[cite_start]This is generally the most efficient method for large numerical matrices ($4 \times 4$ or larger)[cite: 1379].
+
+* [cite_start]**Goal:** Use elementary row operations to transform matrix $A$ into an **upper triangular matrix** (where all entries below the diagonal are 0)[cite: 1379].
+* [cite_start]**The Calculation:** Once the matrix is in upper triangular form, the determinant is simply the **product of the diagonal entries**[cite: 1367].
+* [cite_start]**Rules to Watch:** You must track how your row operations change the determinant value [cite: 1327-1331]:
+    * [cite_start]**Row Swap:** Multiplies the determinant by $-1$[cite: 1327].
+    * [cite_start]**Scaling a Row:** Multiplies the determinant by the scalar $\lambda$[cite: 1328].
+    * [cite_start]**Adding a multiple of one row to another:** Does **not** change the determinant (this is the most useful operation)[cite: 1329].
+
+
+
+### 2. Laplace Expansion (Cofactor Expansion)
+[cite_start]This method is recursive and works well for smaller matrices or matrices containing many zeros (sparse matrices)[cite: 1400].
+
+* **Formula:** You can calculate $\det(A)$ by expanding along **any** row $i$ or column $j$:
+    $$\det(A) = \sum_{j=1}^n (-1)^{i+j} a_{ij} \det(A_{ij})$$
+    * $a_{ij}$ is the entry in row $i$, column $j$.
+    * [cite_start]$A_{ij}$ is the **Minor**: the $(n-1) \times (n-1)$ submatrix obtained by deleting row $i$ and column $j$[cite: 1397, 1400].
+    * [cite_start]$(-1)^{i+j}$ is the **Sign Factor**: It follows a checkerboard pattern starting with $+$ in the top-left[cite: 1397].
+
+
+
+### 3. Block Matrix Shortcuts
+[cite_start]If your matrix can be partitioned into blocks where the lower-left block is all zeros (block upper triangular), you can split the problem [cite: 1433-1435].
+
+* **Formula:**
+    $$\det \begin{pmatrix} A & B \\ 0 & C \end{pmatrix} = \det(A) \cdot \det(C)$$
+* [cite_start]This allows you to compute the determinants of the smaller matrices $A$ and $C$ separately and multiply them[cite: 1435].
+
+
 ### **Lecture 9: Eigenvalues & Eigenvectors**
 * **Definition 9.18 (Eigenvalues/Vectors):** The core definition $Av = \lambda v$. [cite_start]Everything builds on this[cite: 1623].
 * [cite_start]**Proposition 9.20 & Definition 9.21 (Characteristic Polynomial):** Know $p_A(x) = \det(xI - A)$ and how to find roots to get eigenvalues[cite: 1630, 1634].
