@@ -66,6 +66,11 @@ Based on Lecture 8, there are two primary practical methods for calculating the 
 * [cite_start]**Theorem 11.14 (The "Best" Diag Test):** $A$ is diagonalizable **if and only if** $m_A(x)$ has **no repeated factors** (i.e., $(x-1)(x-2)$ is okay, but $(x-1)^2$ is not)[cite: 1926].
 * [cite_start]**Example 11.12:** Read this to understand why the Jordan block $(x-\lambda)^n$ is the "worst case" scenario (not diagonalizable)[cite: 1906].
 
+Suppose you have a matrix where you look for the characteristic polynomial.
+dimension of the kernel is  = 1 < 2 what is the span of the columns?. 
+therefre the image is just the span fo the first column. 
+you get an eigenvector and it's also in the span. 
+only concerned with 2x2 matric 
 ### **Lecture 12: Jordan Canonical Form (JCF)**
 * [cite_start]**Theorem 12.4 (JCF Existence):** Know that every matrix is similar to a Jordan matrix (block diagonal)[cite: 1974].
 * **Theorem 12.8 (2x2 JCF):** **Must Read.** This tells you exactly how to handle the $2\times2$ case where eigenvalues are repeated but it's not diagonalizable. [cite_start]You need to find a generalized eigenvector[cite: 1991].
@@ -73,11 +78,15 @@ Based on Lecture 8, there are two primary practical methods for calculating the 
 * [cite_start]**Corollary 12.18 (Matrix Exp):** Definition of $e^A$[cite: 2101].
 * **Example 12.19 & Proposition 12.17(ii):** Know the formula for the exponential of a Jordan block. [cite_start]It results in a matrix with terms like $\frac{t^k}{k!}e^{\lambda t}$ in the upper triangle[cite: 2046, 2113].
 
+hw 12 #1 
+
 ### **Lecture 13: Matrix Exponentials & ODEs**
 * [cite_start]**Theorem 13.1 (Properties):** Specifically property (ii) $\det(e^A) = e^{\text{tr}(A)}$ and (iv) the derivative rule[cite: 2124].
 * **Corollary 13.4 (ODE Solution):** The solution to $x' = Ax$ is $x(t) = e^{tA}x(0)$. [cite_start]This is the main application problem you will likely solve[cite: 2153].
 * **Example 13.5:** Read this carefully. It walks through solving a second-order ODE by converting it to a matrix system. [cite_start]It covers the three cases: distinct real roots, repeated roots (Jordan case), and complex roots[cite: 2157].
 
+
+example 13.3 
 # **Linear Algebra Final Exam Master Note (Lectures 8–13)**
 
 ## **Lecture 8: Determinants**
