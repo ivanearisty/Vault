@@ -128,3 +128,6 @@ $$
 \text{If } span(v_{1},v_{2},v_{3},v_{4}) \subseteq span(v_{1}-v_{2},v_{2}-v_{3},v_{3}-v_{4},v_{4})
 \end{gather}
 $$
+
+## Problem 2
+
