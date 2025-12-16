@@ -1,3 +1,16 @@
+
+1. straight up diagonalizable
+2. repeated eigenvalues jordan cannonical form
+3. complex eigenvalues is the real cannoncial form 12.10-18.8
+
+if reals you do 12.8, 
+if complex 12.10.
+
+you have a complex eigenvector corresponding to some eingevalue, you need to take the real part and the imaginary part 
+
+
+problem 4 is just quadratic formula
+
 ### **Recipe 1: Large Determinants (Practice Final Prob 1)**
 **The Goal:** Compute the determinant of a large ($4 \times 4$ or $5 \times 5$) matrix.
 **The Trick:** It will likely be a **Block Matrix** (lots of zeros in a corner).
@@ -17,18 +30,6 @@
     * *Remember:* Adding a multiple of a row to another does **not** change the determinant. [cite_start]Use this to create zeros, *then* expand[cite: 1195].
 
 ---
-
-1. straight up diagonalizable
-2. repeated eigenvalues jordan cannonical form
-3. complex eigenvalues is the real cannoncial form 12.10-18.8
-
-if reals you do 12.8, 
-if complex 12.10.
-
-you have a complex eigenvector corresponding to some eingevalue, you need to take the real part and the imaginary part 
-
-
-problem 4 is just quadratic formula
 ### **Recipe 2: Real Canonical Form (Practice Final Prob 2)**
 **The Goal:** Analyze a matrix (likely $2 \times 2$ or $3 \times 3$) that has complex eigenvalues. Find the basis $P$ that makes it "almost diagonal" (Real Canonical Form).
 
