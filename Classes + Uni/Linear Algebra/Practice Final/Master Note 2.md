@@ -42,6 +42,16 @@ Based on Lecture 8, there are two primary practical methods for calculating the 
     $$\det \begin{pmatrix} A & B \\ 0 & C \end{pmatrix} = \det(A) \cdot \det(C)$$
 * [cite_start]This allows you to compute the determinants of the smaller matrices $A$ and $C$ separately and multiply them[cite: 1435].
 
+ 
+### Inverse of a $2 \times 2$ matrix.
+
+Here is the map:
+If you have a matrix $P = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$, its inverse is:
+$$P^{-1} = \frac{1}{ad-bc} \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$$
+
+Your matrix is $P = \begin{pmatrix} -1 & -1 \\ 1 & 0 \end{pmatrix}$.
+
+Looking at that map, what are your values for $a, b, c,$ and $d$? Once you identify them, swap them into that formula to get your final $P^{-1}$.
 
 ### **Lecture 9: Eigenvalues & Eigenvectors**
 * **Definition 9.18 (Eigenvalues/Vectors):** The core definition $Av = \lambda v$. [cite_start]Everything builds on this[cite: 1623].
