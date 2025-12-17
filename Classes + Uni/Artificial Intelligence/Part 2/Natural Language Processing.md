@@ -135,3 +135,35 @@ Finally we're going to have these two matrices W and W', and then we're gonna fr
 
 **There is only 1 vector for "bank" irrespective of the meaning that may be contained in the input training data.**
 
+## Language Modeling
+
+Pmodel (Wt | Wt-1, ..., Wt(-n))
+![[Screenshot 2025-12-17 at 3.21.30 PM.png | 400]]
+
+### Recurrent Neural Networks
+
+fully dynamic models
+$$
+\begin{gather}
+S_{t} = f_{t}(S_{t-1}, \theta_{t}) \leftarrow \text{impossible to model} \\
+S_{t} = f(S_{t-1}, \theta_{t}) \leftarrow \text{can model}
+\end{gather}
+$$
+
+we're modelling something that does not change over time.
+
+In kalman filter we had the idea of an action, but now we have implicit action "event"
+
+$$
+\begin{gather}
+\text{h is a hidden state} \\
+\text{q is a hypothesis function} \\
+\text{x is an event } \\
+\theta \text{ is a paramter} \\
+
+h_{t} = q(h_{t-1}, x_{t}, \theta) \leftarrow \text{can model}
+\end{gather}
+$$
+
+![[Pasted image 20251217153145.png]]
+
