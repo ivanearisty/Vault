@@ -183,3 +183,5 @@ We have X = n x w
 At the end we do dimensionality reduction to find the latent variables that are important.
 
 Doing an SVD 
+
+![[Pasted image 20251217165559.png]]

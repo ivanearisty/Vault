@@ -4,3 +4,4 @@
     3. MDP Estimation
     4. MDP Optimal Solution
 
+Make a summary of important sections/concepts like a loss function section, section where you explain sigmoidal/relu/etc..., and others
