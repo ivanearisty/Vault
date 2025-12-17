@@ -167,3 +167,19 @@ $$
 
 ![[Pasted image 20251217153145.png]]
 
+![[Screenshot 2025-12-17 at 3.33.28 PM.png]]
+
+the trainable paramteres are the u vector, the b bias, and the w.
+
+this can allow us to model a time series.
+
+but we dont have a lot of hopes for this guy.
+
+1. we need to increase the number of parameters
+2. we need to make the hiddent state a vector ht and decouple it from the dimensionality of the target variable y
+
+We have X = n x w
+
+At the end we do dimensionality reduction to find the latent variables that are important.
+
+Doing an SVD 
