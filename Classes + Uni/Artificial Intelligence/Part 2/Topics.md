@@ -9,3 +9,5 @@ Make a summary of important sections/concepts like a loss function section, sect
 bellman expectation equation derivation and deviations
 
 MDP, value functions, Q-functions, Monte Carlo, TD(0), policy iteration
+
+Well concentrate on conceptual/reasoning things in transformers and word2vec and for MDP a bit numerical or mathematical based
