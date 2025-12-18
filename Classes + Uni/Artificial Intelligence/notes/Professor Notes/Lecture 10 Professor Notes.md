@@ -32,8 +32,10 @@ The professor offered an intuitive explanation of the attention mechanism:
 5. After receiving their assistance, your knowledge has been enriched (V̂)
 
 This illustrates how attention allows tokens to gather relevant information from other tokens.
-
 ### Multi-Head Attention
+
+![[Screenshot 2025-12-17 at 10.40.10 PM.png | 500]]
+
 
 Different attention heads can specialize in different patterns:
 
@@ -69,6 +71,8 @@ The benefit of multiple experts comes from **diversity** – they need to make d
 - Different routing policies (sparse vs. dense) affect the correlation
 
 **Reference**: The professor recommended the **DeepSeek MoE** paper for detailed block diagrams and equations on what changes in the baseline transformer architecture when using MoE.
+
+![[Pasted image 20251217225638.png | 500]]
 
 ---
 

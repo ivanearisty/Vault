@@ -1,3 +1,4 @@
+![[IMG_6350.png]]
 ## Part 2: Transformer Self-Attention Mechanism
 
 ### Motivation: Context-Dependent Meaning
