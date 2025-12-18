@@ -7,3 +7,5 @@
 Make a summary of important sections/concepts like a loss function section, section where you explain sigmoidal/relu/etc..., and others
 
 bellman expectation equation derivation and deviations
+
+MDP, value functions, Q-functions, Monte Carlo, TD(0), policy iteration
