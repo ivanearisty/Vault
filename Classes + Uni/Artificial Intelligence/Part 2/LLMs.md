@@ -185,3 +185,5 @@ At the end we do dimensionality reduction to find the latent variables that are 
 Doing an SVD 
 
 ![[Pasted image 20251217165559.png]]
+
+![[Screenshot 2025-12-17 at 6.52.23 PM.png]]
