@@ -302,16 +302,7 @@ The professor emphasized: "Reinforcement learning is a very long path... there a
 ---
 
 ## Key Terminology
-
-|Term|Symbol|Definition|
-|---|---|---|
-|State|S (random variable), s (value)|Current situation of the agent|
-|Action|A (random variable), a (value)|Decision made by the agent|
-|Reward|R|Scalar feedback signal from environment|
-|Episode|—|Complete interaction from start to termination|
-|Trajectory|τ|Sequence of experiences over an episode|
-|Terminal state|—|State where episode ends|
-|Time horizon|T|When interaction terminates|
+![[Screenshot 2025-12-18 at 1.12.49 PM.png]]
 
 **Important notation convention**:
 
