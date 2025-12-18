@@ -182,8 +182,37 @@ We have X = n x w
 
 At the end we do dimensionality reduction to find the latent variables that are important.
 
+https://www.youtube.com/watch?v=WCUNPb-5EYI LSTM VIDEO
+
 Doing an SVD 
 
 ![[Pasted image 20251217165559.png]]
 
+**Maximum Likelihood Sequence Estimation**: by keeping track of trajections you dont have to do 
+greedy single stage decoding. 
+
 ![[Screenshot 2025-12-17 at 6.52.23 PM.png]]
+
+### [Bleu Score](https://pantelis.github.io/aiml-common/lectures/nlp/nmt/nmt-metrics/)
+
+Neural machine translation:
+![[Screenshot 2025-12-17 at 8.22.43 PM.png]]
+
+
+
+## Transformers
+
+1. Eliminate the recurrent connections: $$
+h_{t-1} \rightarrow h_{t}
+$$
+2. Need to inject positional information wrt to input tokens.
+3. Most important: we need to build contextual embeddings in an approach that we will call the attention mechanism.
+
+### Simplest form
+
+Simplest form of attention mechanism:
+
+https://pantelis.github.io/aiml-common/lectures/nlp/nmt/rnn-nmt-attention/
+
+https://pantelis.github.io/aiml-common/lectures/nlp/transformers/transformers-intro.html
+
