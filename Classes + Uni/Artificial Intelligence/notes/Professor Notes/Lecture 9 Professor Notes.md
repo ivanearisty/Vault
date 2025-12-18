@@ -67,6 +67,7 @@ Why linear projections work: Earlier in the course, the class saw how linear pro
 3. Apply **softmax** row-wise to get **attention weights A** (T × T)
 4. Compute **V̂ = A · V** (dimensions T × D)
 
+![[Screenshot 2025-12-17 at 9.16.33 PM.png]]
 ### Why Scale by √D?
 
 Without scaling, softmax outputs become very sparse (only 1-2 tokens attend to each other). With scaling:
