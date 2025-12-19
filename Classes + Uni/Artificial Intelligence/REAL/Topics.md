@@ -15,3 +15,5 @@ Well concentrate on conceptual/reasoning things in transformers and word2vec and
 - Focus on understanding the grid world examples and how to apply the equations
 - Make sure you understand how to evaluate V* after 2-3 iterations of policy iteration
 - The recycling robot example from Sutton's book was mentioned - understand V*(high) and V*(low)
+
+https://www.youtube.com/watch?v=l87rgLg90HI
