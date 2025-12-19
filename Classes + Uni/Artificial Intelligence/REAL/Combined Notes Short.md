@@ -1,4 +1,5 @@
 # Lecture 7
+Natural Language Processing + Tokenization (BPE) + Word2Vec + RNNs
 ## Part 3: Natural Language Processing Fundamentals
 **1. Tokenization** Converting words into numbers. The simplest form treats each word as a token, but this isn't optimal (discussed in detail below).
 **2. Part-of-Speech (POS) Tagging** Classifying words grammatically (noun, verb, adjective, etc.). Example: "London" → noun, "is" → verb
@@ -166,7 +167,7 @@ Just as we went from a single sigmoidal neuron to dense layers, we go from a sin
 
 ---
 # Lecture 8
-
+LSTM + Seq2Seq Translation + Beam Search + BLEU + Intro to Transformers
 ## 5. Long Short-Term Memory (LSTM) Architecture
 
 The LSTM was developed to solve the gradient flow problem by introducing controlled gates and a **highway** for gradient propagation.
@@ -312,6 +313,7 @@ Or equivalently: X_hat = softmax(X · X^T) · X
 
 ---
 # Lecture 9 
+Transformer Self-Attention (QKV, Masking, Multi-Head, LayerNorm/MLP blocks, Positional Embeddings, MoE)
 ## Part 2: Transformer Self-Attention Mechanism
 ![[Pasted image 20251219032602.png]]
 ## Part 3: Query, Key, Value (Q, K, V) Parameterization
@@ -480,6 +482,7 @@ where Σᵢ Gᵢ(x) = 1, Gᵢ(x) ≥ 0
 ```
 
 # Lecture 10
+Vision Transformers + Propositional Logic + Wumpus World + KB Ops + Model Checking
 ## Part 4: Vision Transformers (ViTs)
 ### Tokenization in Vision
 Unlike NLP where tokens are words/subwords, in ViTs:
@@ -564,7 +567,7 @@ Given a knowledge base KB at some state (e.g., timestamp t=4 in Wumpus World), d
 - If ¬P₁₂ is false in all satisfying models → Response is **False**
 - If mixed → Response is **Unknown**
 # Lecture 11
-
+PDDL + MDPs (definitions, grid world, value functions, Bellman, prediction vs control)
 ## PDDL: Planning Domain Definition Language
 PDDL is a **domain-specific language (DSL)** for specifying planning problems.
 ### Two Required Files:
@@ -577,7 +580,7 @@ PDDL is a **domain-specific language (DSL)** for specifying planning problems.
     - Initial state
     - Goal state
 
-# Markov Decision Processes (MDPs)
+## Markov Decision Processes (MDPs)
 ![[Pasted image 20251219034403.png]]
 
 ![[Screenshot 2025-12-19 at 3.46.31 AM.png]]
@@ -601,7 +604,6 @@ This represents: "Given I'm in state S and take action A, what's the probability
 ### Deriving Component Models:
 **Transition Model** (from marginalization): $$P(S' | S, A) = \sum_R P(S', R | S, A)$$
 **Reward Model**: $$P(R | S, A) = \sum_{S'} P(S', R | S, A)$$
-
 ## The Grid World Example
 **Environment characteristics**:
 - Grid of cells (states)
@@ -768,7 +770,8 @@ Find the optimal policy π* that maximizes value for all states.
 3. Improve the policy based on the value function (control)
 4. Repeat until convergence to optimal policy π*
 
-# Lecture 12 Professor Notes
+# Lecture 12
+MDPs (value/Q, Bellman expectation/optimality, policy iteration, MC, TD, TD(λ), value iteration example)
 ## 1. Markov Decision Processes (MDPs) - Foundations
 
 ### 1.1 What is an MDP?
