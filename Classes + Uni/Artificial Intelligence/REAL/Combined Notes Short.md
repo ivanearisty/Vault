@@ -1346,34 +1346,72 @@ For γ = 0.9: V(S1) ≈ 10, V(S2) ≈ 9
 
 **Key Insight**: After just a few iterations, the policy shows optimal arrows pointing toward terminal states via shortest paths.
 
-### 10.3 Special States Example (from Final Exam)
+# Value Iteration: The Recycling Robot
+**Goal:** Calculate $V^*(High)$ and $V^*(Low)$ by checking the `max` option at every single step.
+## 1. The Setup (Parameters)
+- **States:** `High` (Full Battery), `Low` (Low Battery).
+- **Discount Factor (**$\gamma$**):** $0.9$  
+- **Rewards:**
+    - Search: $+5$  
+    - Wait: $+1$  
+    - Recharge: $0$  
+    - Empty Battery (Penalty): $-3$  
+- **Probabilities:**
+    - **From High:** If you Search, $70\%$ chance stay High ($\alpha=0.7$), $30\%$ drop to Low.
+    - **From Low:** If you Search, $50\%$ chance stay Low ($\beta=0.5$), $50\%$ battery dies (reset to High).
+## 2. Iteration 0: Initialization
+We start knowing nothing.
+- $V_0(High) = 0$  
+- $V_0(Low) = 0$  
+## 3. Iteration 1
+We calculate the value for **every action** assuming future values are $0$, then pick the winner (`max`).
+### **State: High**
+- **Option A (Wait):** $1 + 0.9(0) = \mathbf{1}$  
+- **Option B (Search):**
+    - $0.7[5 + 0.9(0)] + 0.3[5 + 0.9(0)]$  
+    - $0.7(5) + 0.3(5) = \mathbf{5}$  
+- **Winner:** Search ($5$).
+- **Update:** $V_1(High) = 5$  
+### **State: Low**
+- **Option A (Wait):** $1 + 0.9(0) = \mathbf{1}$  
+- **Option B (Search):**
+    - $0.5[5 + 0.9(0)] + 0.5[-3 + 0.9(0)]$  
+    - $2.5 + (-1.5) = \mathbf{1}$  
+- **Option C (Recharge):** $0 + 0.9(0) = \mathbf{0}$  
+- **Winner:** Wait or Search (Tie, both $1$). Let's pick **Wait**.
+- **Update:** $V_1(Low) = 1$  
+**End of Iteration 1:**
+- $V_1(High) = 5$  
+- $V_1(Low) = 1$  
+## 4. Iteration 2
 
-From the Spring 2025 final exam:
+Now we use the values from Iteration 1 ($V(H)=5, V(L)=1$).
+### **State: High**
+- **Option A (Wait):**
+    - $1 + 0.9(\text{Old High Value})$  
+    - $1 + 0.9(5) = 1 + 4.5 = \mathbf{5.5}$  
+- **Option B (Search):**
+    - $0.7[5 + 0.9(\mathbf{5})] + 0.3[5 + 0.9(\mathbf{1})]$  
+    - $0.7(9.5) + 0.3(5.9)$  
+    - $6.65 + 1.77 = \mathbf{8.42}$  
+- **Winner:** Search ($8.42$).
+- **Update:** $V_2(High) = 8.42$  
+### **State: Low**
+- **Option A (Wait):**
+    - $1 + 0.9(\text{Old Low Value})$  
+    - $1 + 0.9(1) = \mathbf{1.9}$  
+- **Option B (Search):**
+    - $0.5[5 + 0.9(\mathbf{1})] + 0.5[-3 + 0.9(\mathbf{5})]$  
+    - $0.5(5.9) + 0.5(1.5)$  
+    - $2.95 + 0.75 = \mathbf{3.7}$  
+- **Option C (Recharge):**
+    - $0 + 0.9(\text{Old High Value})$ _(Recharging sends you to High)_
+    - $0 + 0.9(5) = \mathbf{4.5}$  
+- **Winner:** Recharge ($4.5$).
+- **Update:** $V_2(Low) = 4.5$  
+**End of Iteration 2:**
+- $V_2(High) = 8.42$  
+- $V_2(Low) = 4.5$  
 
-**5×5 Grid with Special States**:
-
-- State A: Any action teleports to A' with reward +10
-- State B: Any action teleports to B' with reward +5
-- Walls give -1 reward, other moves give 0
-- γ = 0.9, uniform random policy
-
-**Question**: Why is V(A) < 10 while V(B) > 5?
-
-**Answer**:
-
-- Agent teleported to A' receives immediate reward of 10
-    
-- But A' might be in a bad location (can hit walls)
-    
-- The value includes FUTURE expected rewards, not just immediate
-    
-- If A' is near walls, future expected rewards are negative
-    
-- So V(A) = 10 + γ × (expected future) < 10
-    
-- For B, the +5 immediate reward plus favorable location of B' means
-    
-- V(B) = 5 + γ × (positive expected future) > 5
-    
 
 ![[Models]]
