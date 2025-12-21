@@ -32,7 +32,7 @@ Let $V = \mathbb{R}^2$. Let  $U$ be the y-axis: $U = \text{span}\{(0,1)\}$.
 
 1. Define $V_2$ (The diagonal line $y=x$). Let $V_2 = \text{span}\{(1,1)\}$.
 - **Intersection:** A vector in $V_2$ looks like $(c, c)$. For this to be in $U$ (where the x-coordinate is 0), we must have $c=0$. Thus, $V_2 \cap U = \{(0,0)\}$.
-- Sum: We need to show any vector $(x,y)$ can be formed by sum of vectors from $V_2$ and $U$.
+- **Sum:** We need to show any vector $(x,y)$ can be formed by sum of vectors from $V_2$ and $U$.
     We can write $(x,y) = \underbrace{(x,x)}_{\in V_2} + \underbrace{(0, y-x)}_{\in U}$.
 - Therefore, $V = V_2 \oplus U$.
 
@@ -40,4 +40,7 @@ We have shown that $V = V_1 \oplus U$ and $V = V_2 \oplus U$.
 
 However, $V_1 \neq V_2$ because $V_1$ contains the vector $(1,0)$ while $V_2$ does not.
 ## Problem 3
+### 1
+
+
 ## Problem 4
