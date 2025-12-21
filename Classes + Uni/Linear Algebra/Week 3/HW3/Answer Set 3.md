@@ -41,6 +41,181 @@ We have shown that $V = V_1 \oplus U$ and $V = V_2 \oplus U$.
 However, $V_1 \neq V_2$ because $V_1$ contains the vector $(1,0)$ while $V_2$ does not.
 ## Problem 3
 ### 1
+Since $x \in \text{span}(v_1, \dots, v_n)$, we can write $x$ as a linear combination of these vectors:
+$$x = c_1v_1 + c_2v_2 + \dots + c_nv_n$$
+where $c_i \in \mathbb{R}$ are scalars.
 
+$$T(x) = T(c_1v_1 + c_2v_2 + \dots + c_nv_n)$$
+$$T(x) = c_1T(v_1) + c_2T(v_2) + \dots + c_nT(v_n)$$
 
+so we can write show that $T(x)$ is a linear combination of the vectors $T(v_1), \dots, T(v_n)$.
+
+### 2
+1. Zero:
+    Since $U$ is a subspace, $0_V \in U$. By the property of linear maps, $T(0_V) = 0_W$. Thus, $0_W \in T(U)$.
+2. Addition:
+    Let $y_1, y_2 \in T(U)$. By definition, there exist $u_1, u_2 \in U$ such that $T(u_1) = y_1$ and $T(u_2) = y_2$.
+    Consider the sum $y_1 + y_2$:$$y_1 + y_2 = T(u_1) + T(u_2) = T(u_1 + u_2)$$
+    Since $U$ is a subspace, $u_1 + u_2 \in U$. Therefore, $T(u_1 + u_2) \in T(U)$.
+    
+3. Scalar Multiplication:
+    Let $y \in T(U)$ and $c \in \mathbb{R}$. There exists $u \in U$ such that $T(u) = y$.
+    Consider the product $cy$:$$cy = cT(u) = T(cu)$$
+    Since $U$ is a subspace, $cu \in U$. Therefore, $T(cu) \in T(U)$.
+
+### 3
+Since $v_1, \dots, v_n$ are linearly dependent, there exist scalars $c_1, \dots, c_n$, not all zero, such that:
+
+$$c_1v_1 + \dots + c_nv_n = 0_V$$
+
+Apply $T$ to both sides:
+
+$$T(c_1v_1 + \dots + c_nv_n) = T(0_V)$$
+
+Using linearity:
+
+$$c_1T(v_1) + \dots + c_nT(v_n) = 0_W$$
+Thus, $T(v_1), \dots, T(v_n)$ are linearly dependent.
+
+### 4
+We set up the dependence relation for $v_1, \dots, v_n$:
+$$c_1v_1 + \dots + c_nv_n = 0_V$$
+We want to show that all $c_i$ must be zero.
+Apply $T$ to both sides:
+$$T(c_1v_1 + \dots + c_nv_n) = T(0_V)$$
+$$c_1T(v_1) + \dots + c_nT(v_n) = 0_W$$
+
+We are given that $T(v_1), \dots, T(v_n)$ are linearly independent. By definition of linear independence, the only scalars that satisfy this equation are all zeros.
+### 5
+We need a map that "collapses" independent vectors. The zero map is the easiest example.
+- Let $V = \mathbb{R}^2$ and $W = \mathbb{R}^2$.
+- Let $T$ be the **Zero Transformation**: $T(v) = 0$ for all $v$.
+- Let our vectors be the standard basis: $v_1 = (1,0)$ and $v_2 = (0,1)$.
+$v_1, v_2$ are linearly independent
+$T(v_1) = 0$ and $T(v_2) = 0$. 
 ## Problem 4
+
+### 1
+**Addition**
+
+Let $u, v \in V$.
+$$\pi(u + v) = (u + v) + W$$
+By the definition of addition in quotient spaces, $(u + W) + (v + W) = (u + v) + W$.
+$$\pi(u + v) = (u + W) + (v + W) = \pi(u) + \pi(v)$$
+**Scalar Multiplication**
+Let $u \in V$ and $c \in \mathbb{R}$.
+$$\pi(cu) = (cu) + W$$
+By the definition of scalar multiplication in quotient spaces, $c(u + W) = (cu) + W$.
+$$\pi(cu) = c(u + W) = c\pi(u)$$
+### 2
+**Addition**
+
+Let $w_1, w_2 \in W$. Since $W$ is a subspace, $w_1 + w_2$ is just standard addition in $V$.
+$$\iota(w_1 + w_2) = w_1 + w_2 = \iota(w_1) + \iota(w_2)$$
+**Scalar Multiplication**
+Let $w \in W$ and $c \in \mathbb{R}$.
+$$\iota(cw) = cw = c\iota(w)$$
+### 3
+
+1. Additivity:
+    
+    We need to show $T(f \cdot g) = T(f) + T(g)$. Note that the operation inside $T$ is the "vector addition" of $V$ (multiplication).
+    
+    $$T(f \cdot g)(x) = \log((f \cdot g)(x)) = \log(f(x) \cdot g(x))$$
+    
+    Using the logarithm property $\log(ab) = \log a + \log b$:
+    
+    $$\log(f(x)) + \log(g(x)) = T(f)(x) + T(g)(x)$$
+    
+    Thus, $T(f \cdot g) = T(f) + T(g)$.
+    
+2. Scalar Multiplication:
+    
+    We need to show $T(f^c) = c \cdot T(f)$. Note that the operation inside $T$ is the "scalar multiplication" of $V$ (exponentiation).
+    
+    $$T(f^c)(x) = \log((f^c)(x)) = \log(f(x)^c)$$
+    
+    Using the logarithm property $\log(a^c) = c \log a$:
+    
+    $$c \log(f(x)) = c \cdot T(f)(x)$$
+    
+    Thus, $T(f^c) = c T(f)$.
+    
+
+**Conclusion:** $T$ is a linear transformation (specifically, an isomorphism between this multiplicative space and the standard additive space).
+
+---
+
+### **(iv) Exponential Map**
+
+**Statement:** Define $S: C(\mathbb{R}) \rightarrow V$ by $S(f)(x) = e^{f(x)}$5.
+
+**Context:** Here, the domain $C(\mathbb{R})$ has standard operations, but the codomain $V$ has the multiplicative operations described in part (iii).
+
+**Proof:**
+
+1. Additivity:
+    
+    We need to show $S(f + g) = S(f) \oplus S(g)$, where $\oplus$ is the vector addition in $V$ (multiplication).
+    
+    LHS:
+    
+    $$S(f + g)(x) = e^{(f + g)(x)} = e^{f(x) + g(x)}$$
+    
+    RHS:
+    
+    $$(S(f) \cdot S(g))(x) = e^{f(x)} \cdot e^{g(x)}$$
+    
+    Since $e^{a+b} = e^a \cdot e^b$, the LHS equals the RHS.
+    
+2. Scalar Multiplication:
+    
+    We need to show $S(c \cdot f) = c \odot S(f)$, where $\odot$ is scalar multiplication in $V$ (exponentiation).
+    
+    LHS:
+    
+    $$S(c \cdot f)(x) = e^{(c \cdot f)(x)} = e^{c \cdot f(x)}$$
+    
+    RHS:
+    
+    $$(S(f)^c)(x) = (e^{f(x)})^c$$
+    
+    Since $(e^a)^c = e^{ac}$, the LHS equals the RHS.
+    
+
+**Conclusion:** $S$ is a linear transformation.
+
+---
+
+### **(v) Polynomial Shift**
+
+**Statement:** Define $T: \mathcal{P}_n(\mathbb{R}) \rightarrow \mathcal{P}_n(\mathbb{R})$ by $T(p)(x) = p(x+1)$6.
+
+Proof:
+
+Let $p(x), q(x) \in \mathcal{P}_n(\mathbb{R})$ and $c \in \mathbb{R}$.
+
+1. Additivity:
+    
+    $$T(p + q)(x) = (p + q)(x+1)$$
+    
+    By the definition of polynomial addition, $(p+q)(y) = p(y) + q(y)$ for any input $y$. Let $y = x+1$:
+    
+    $$p(x+1) + q(x+1) = T(p)(x) + T(q)(x)$$
+    
+    So, $T(p+q) = T(p) + T(q)$.
+    
+2. Scalar Multiplication:
+    
+    $$T(c \cdot p)(x) = (c \cdot p)(x+1)$$
+    
+    By the definition of scalar multiplication, $(c \cdot p)(y) = c \cdot p(y)$.
+    
+    $$c \cdot p(x+1) = c \cdot T(p)(x)$$
+    
+    So, $T(c \cdot p) = c T(p)$.
+    
+
+**Conclusion:** The shift operator is a linear transformation.
+
+Would you like me to tackle Problem 2 (the direct sum question) next?
