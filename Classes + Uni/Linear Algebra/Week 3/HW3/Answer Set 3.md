@@ -116,106 +116,43 @@ $$\iota(w_1 + w_2) = w_1 + w_2 = \iota(w_1) + \iota(w_2)$$
 Let $w \in W$ and $c \in \mathbb{R}$.
 $$\iota(cw) = cw = c\iota(w)$$
 ### 3
+**Addition**
+Using the logarithm property $\log(ab) = \log a + \log b$:
+$$\log(f(x)) + \log(g(x)) = T(f)(x) + T(g)(x)$$
+Thus, $T(f \cdot g) = T(f) + T(g)$.
 
-1. Additivity:
-    
-    We need to show $T(f \cdot g) = T(f) + T(g)$. Note that the operation inside $T$ is the "vector addition" of $V$ (multiplication).
-    
-    $$T(f \cdot g)(x) = \log((f \cdot g)(x)) = \log(f(x) \cdot g(x))$$
-    
-    Using the logarithm property $\log(ab) = \log a + \log b$:
-    
-    $$\log(f(x)) + \log(g(x)) = T(f)(x) + T(g)(x)$$
-    
-    Thus, $T(f \cdot g) = T(f) + T(g)$.
-    
-2. Scalar Multiplication:
-    
-    We need to show $T(f^c) = c \cdot T(f)$. Note that the operation inside $T$ is the "scalar multiplication" of $V$ (exponentiation).
-    
-    $$T(f^c)(x) = \log((f^c)(x)) = \log(f(x)^c)$$
-    
-    Using the logarithm property $\log(a^c) = c \log a$:
-    
-    $$c \log(f(x)) = c \cdot T(f)(x)$$
-    
-    Thus, $T(f^c) = c T(f)$.
-    
+**Scalar Multiplication**
+We need to show $T(f^c) = c \cdot T(f)$. Note that the operation inside $T$ is the "scalar multiplication" of $V$ (exponentiation).
+$$T(f^c)(x) = \log((f^c)(x)) = \log(f(x)^c)$$
+Using the logarithm property $\log(a^c) = c \log a$:
 
-**Conclusion:** $T$ is a linear transformation (specifically, an isomorphism between this multiplicative space and the standard additive space).
+$$c \log(f(x)) = c \cdot T(f)(x)$$
+Thus, $T(f^c) = c T(f)$.
+### 4
+**Addition**
+We need to show $S(f + g) = S(f) \oplus S(g)$, where $\oplus$ is the vector addition in $V$ (multiplication).
+LHS:
+$$S(f + g)(x) = e^{(f + g)(x)} = e^{f(x) + g(x)}$$
+RHS:
+$$(S(f) \cdot S(g))(x) = e^{f(x)} \cdot e^{g(x)}$$
+Since $e^{a+b} = e^a \cdot e^b$, the LHS equals the RHS.
 
----
+**Scalar Multiplication**
+We need to show $S(c \cdot f) = c \odot S(f)$, where $\odot$ is scalar multiplication in $V$ (exponentiation).
+LHS:
+$$S(c \cdot f)(x) = e^{(c \cdot f)(x)} = e^{c \cdot f(x)}$$
+RHS:
+$$(S(f)^c)(x) = (e^{f(x)})^c$$
+Since $(e^a)^c = e^{ac}$, the LHS equals the RHS.
+### 5
+**Addition**
+$$T(p + q)(x) = (p + q)(x+1)$$
+By the definition of polynomial addition, $(p+q)(y) = p(y) + q(y)$ for any input $y$. Let $y = x+1$:
+$$p(x+1) + q(x+1) = T(p)(x) + T(q)(x)$$
+So, $T(p+q) = T(p) + T(q)$.
 
-### **(iv) Exponential Map**
-
-**Statement:** Define $S: C(\mathbb{R}) \rightarrow V$ by $S(f)(x) = e^{f(x)}$5.
-
-**Context:** Here, the domain $C(\mathbb{R})$ has standard operations, but the codomain $V$ has the multiplicative operations described in part (iii).
-
-**Proof:**
-
-1. Additivity:
-    
-    We need to show $S(f + g) = S(f) \oplus S(g)$, where $\oplus$ is the vector addition in $V$ (multiplication).
-    
-    LHS:
-    
-    $$S(f + g)(x) = e^{(f + g)(x)} = e^{f(x) + g(x)}$$
-    
-    RHS:
-    
-    $$(S(f) \cdot S(g))(x) = e^{f(x)} \cdot e^{g(x)}$$
-    
-    Since $e^{a+b} = e^a \cdot e^b$, the LHS equals the RHS.
-    
-2. Scalar Multiplication:
-    
-    We need to show $S(c \cdot f) = c \odot S(f)$, where $\odot$ is scalar multiplication in $V$ (exponentiation).
-    
-    LHS:
-    
-    $$S(c \cdot f)(x) = e^{(c \cdot f)(x)} = e^{c \cdot f(x)}$$
-    
-    RHS:
-    
-    $$(S(f)^c)(x) = (e^{f(x)})^c$$
-    
-    Since $(e^a)^c = e^{ac}$, the LHS equals the RHS.
-    
-
-**Conclusion:** $S$ is a linear transformation.
-
----
-
-### **(v) Polynomial Shift**
-
-**Statement:** Define $T: \mathcal{P}_n(\mathbb{R}) \rightarrow \mathcal{P}_n(\mathbb{R})$ by $T(p)(x) = p(x+1)$6.
-
-Proof:
-
-Let $p(x), q(x) \in \mathcal{P}_n(\mathbb{R})$ and $c \in \mathbb{R}$.
-
-1. Additivity:
-    
-    $$T(p + q)(x) = (p + q)(x+1)$$
-    
-    By the definition of polynomial addition, $(p+q)(y) = p(y) + q(y)$ for any input $y$. Let $y = x+1$:
-    
-    $$p(x+1) + q(x+1) = T(p)(x) + T(q)(x)$$
-    
-    So, $T(p+q) = T(p) + T(q)$.
-    
-2. Scalar Multiplication:
-    
-    $$T(c \cdot p)(x) = (c \cdot p)(x+1)$$
-    
-    By the definition of scalar multiplication, $(c \cdot p)(y) = c \cdot p(y)$.
-    
-    $$c \cdot p(x+1) = c \cdot T(p)(x)$$
-    
-    So, $T(c \cdot p) = c T(p)$.
-    
-
-**Conclusion:** The shift operator is a linear transformation.
-
-Would you like me to tackle Problem 2 (the direct sum question) next?
+**Scalar Multiplication**
+$$T(c \cdot p)(x) = (c \cdot p)(x+1)$$
+By the definition of scalar multiplication, $(c \cdot p)(y) = c \cdot p(y)$.
+$$c \cdot p(x+1) = c \cdot T(p)(x)$$
+So, $T(c \cdot p) = c T(p)$.

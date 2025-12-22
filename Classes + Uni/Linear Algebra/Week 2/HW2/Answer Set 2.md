@@ -1,4 +1,3 @@
-# Problem Set 2
 ## Problem 1
 ### i
 
@@ -217,7 +216,7 @@ $$\mathcal{B} = \{ x-1, x^2-1, x^3-1, \dots, x^n-1 \}$$
     Consider the linear combination:
     $$c_1(x-1) + c_2(x^2-1) + \dots + c_n(x^n-1) = 0$$
     The highest degree term is $c_n x^n$. For the polynomial to be zero, $c_n$ must be 0. We can proceed by induction downwards (the next highest term is $c_{n-1}x^{n-1}$, etc.) to show that all $c_i = 0$.
-
+    
 Thus, a valid basis is:
 $$\mathcal{B} = \{ x^k - 1 \mid k = 1, \dots, n \}$$
 ### iii
