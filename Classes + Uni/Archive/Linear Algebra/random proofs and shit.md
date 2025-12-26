@@ -29,23 +29,7 @@ $$\langle iv, iv \rangle = i \cdot \bar{i} \cdot \langle v, v \rangle = i(-i) \l
 
 Because $i \cdot \bar{i} = 1$, the length stays positive and real.
 
-### 3. Math vs. Physics Conventions
 
-It is important to note that the "first slot" vs. "second slot" choice is purely a **convention**.
-
-- **Mathematicians** usually pick the **first** slot to be linear (as seen in your textbook).
-    
-- **Physicists** (especially in Quantum Mechanics using Bra-Ket notation $\langle \phi | \psi \rangle$) usually pick the **second** slot to be linear.
-    
-
-|**Property**|**Math Convention**|**Physics Convention**|
-|---|---|---|
-|**Linear Slot**|First: $\langle cx, y \rangle = c \langle x, y \rangle$|Second: $\langle x, cy \rangle = c \langle x, y \rangle$|
-|**Conjugate Slot**|Second: $\langle x, cy \rangle = \bar{c} \langle x, y \rangle$|First: $\langle cx, y \rangle = \bar{c} \langle x, y \rangle$|
-
-Regardless of the convention, the core logic is the same: one side must "undo" the imaginary part of the other to keep the geometry consistent.
-
-Would you like to see how this rule affects the **Cauchy-Schwarz Inequality** in complex spaces?
 ## Theorem 6.1
 
 ### A
@@ -57,3 +41,58 @@ $$
 \end{gather}
 $$
 ### B
+$$
+\begin{gather}
+\langle x, cy \rangle = \overline{\langle cy, x \rangle } = \bar{c} \overline{\langle y,x \rangle } = \bar{c} \langle x,y \rangle
+\end{gather}
+$$
+### C
+$$
+\begin{gather}
+\langle x,0 \rangle = \sum_{i=1}^{n} x_{i}0 = \mathbf{0} \\
+\langle 0,x \rangle = \sum_{i=1}^{n} 0x_{i} = \mathbf{0} \\
+\end{gather}
+$$
+Since both are the $\mathbf{0}$ vector, they are equal to each other.
+### D
+$$
+\langle x,x \rangle = \mathbf{0} \iff x = \mathbf{0} 
+$$
+Say we have that
+$$
+\langle x, x \rangle = \mathbf{0}
+$$
+Let $x = (a_{1}, a_{2}, \dots, a_{n})$
+~~Then we can represent $\langle x,x \rangle$ as a summation of a's:~~
+$$
+\langle x,x \rangle = \sum ^{n}_{i=1}a_{i}a_{i} = \sum ^{n}_{i=1}a_{i}^{2}
+$$
+
+For a complex vector space, the inner product is defined using the **complex conjugate** ($\bar{a}$). Instead of just squaring the components, we multiply each component by its conjugate:
+
+$$\langle x, x \rangle = \sum_{i=1}^{n} a_i \bar{a}_i$$
+
+### Why this solves the problem
+
+Recall that for any complex number $z = a + bi$, the product of the number and its conjugate is:
+
+$$z\bar{z} = (a+bi)(a-bi) = a^2 + b^2 = |z|^2$$
+
+Because $a$ and $b$ are real numbers, $a^2 + b^2$ is **always a non-negative real number**. It can only be zero if both $a$ and $b$ are zero.
+
+### Refining your proof
+
+Now, if we re-examine your summation with this adjustment:
+
+1. Assume $\langle x, x \rangle = 0$.
+    
+2. By definition: $\sum_{i=1}^{n} |a_i|^2 = 0$.
+    
+3. Since $|a_i|^2 \geq 0$ for all $i$, the only way for the sum of non-negative real numbers to be zero is if every single term is zero:
+    
+    $$|a_1|^2 = 0, |a_2|^2 = 0, \dots, |a_n|^2 = 0$$
+    
+4. If $|a_i|^2 = 0$, then $a_i = 0$ for all $i$.
+    
+5. Therefore, $x = (0, 0, \dots, 0) = \mathbf{0}$.
+    
