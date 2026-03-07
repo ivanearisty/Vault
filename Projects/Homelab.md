@@ -33,6 +33,9 @@ TrueNAS (homelab-infra):
 | print_monitor | ghcr.io/ivanearisty/3d-printer-monitor | Camera + Bambu printer controller |
 | security-recorder | ghcr.io/ivanearisty/building-security-recorder | Planned: ffmpeg RTSP → HLS recording |
 | security-nginx | ghcr.io/ivanearisty/building-security-nginx | Planned: serves recordings to web app |
+| mosquitto | eclipse-mosquitto:2 | MQTT broker for [[Smart Lighting]] |
+| zigbee2mqtt | koenkk/zigbee2mqtt | Zigbee ↔ MQTT bridge for [[Smart Lighting]] |
+| homeassistant | ghcr.io/home-assistant/home-assistant:stable | Local smart home control for [[Smart Lighting]] |
 
 ## Network
 
