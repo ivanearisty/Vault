@@ -86,13 +86,13 @@ Standard Zigbee bulbs don't come in 2200K amber Edison style. The solution: use 
 
 #### Bulb Choice: Brightever ST58 Edison (winner)
 
-| | DiCUNO ST64 | Brightever ST58 |
-|---|---|---|
-| CRI | 80 | **90+** |
-| Lumens | 600lm | **850lm** |
-| Dimmable | No | **Yes** |
-| Price | ~$5/bulb (2-pack) | **~$3.67/bulb (6-pack)** |
-| Shape | ST64 (larger globe) | ST58 (classic Edison) |
+|          | DiCUNO ST64         | Brightever ST58          |
+| -------- | ------------------- | ------------------------ |
+| CRI      | 80                  | **90+**                  |
+| Lumens   | 600lm               | **850lm**                |
+| Dimmable | No                  | **Yes**                  |
+| Price    | ~$5/bulb (2-pack)   | **~$3.67/bulb (6-pack)** |
+| Shape    | ST64 (larger globe) | ST58 (classic Edison)    |
 
 **Go with Brightever.** Higher CRI, brighter, dimmable, cheaper.
 
