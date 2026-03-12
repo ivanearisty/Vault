@@ -105,11 +105,11 @@ CRI (Color Rendering Index) measures how accurately a light reveals true colors 
 
 #### Zigbee Smart Plugs (control the dumb bulbs + mesh repeaters)
 
-| Option | Price | Notes |
-|--------|-------|-------|
-| SONOFF ZBMINI-L2 | ~$10 | Inline switch, compact |
-| IKEA TRETAKT | ~$10 | Simple plug, well-supported |
-| SONOFF S31 Lite ZB | ~$12 | Outlet plug, power monitoring |
+| Option             | Price | Notes                         |
+| ------------------ | ----- | ----------------------------- |
+| SONOFF ZBMINI-L2   | ~$10  | Inline switch, compact        |
+| IKEA TRETAKT       | ~$10  | Simple plug, well-supported   |
+| SONOFF S31 Lite ZB | ~$12  | Outlet plug, power monitoring |
 
 Plug a lamp into the Zigbee plug → plug controls on/off → plug also repeats mesh signal. You lose smart dimming (on/off only), but for ambient Edison bulbs at a fixed warm glow, on/off is all you need.
 
