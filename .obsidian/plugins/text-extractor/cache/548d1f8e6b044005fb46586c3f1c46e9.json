@@ -1,0 +1,1 @@
+{"path":"Screenshot 2025-05-02 at 10.03.24 PM.png","text":"filter INPUT Packet filtering FORWARD OUTPUT PREROUTING | Modifying source or destination INPUT network addresses OUTPUT POSTROUTING mangle | PREROUTING | Packet content modification INPUT FORWARD OUTPUT POSTROUTING","libVersion":"0.3.2","langs":"eng"}

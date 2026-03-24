@@ -1,0 +1,1 @@
+{"path":"web0nd-notes/z ScreenShots/Screenshot 2024-10-08 at 8.28.40 AM.jpg","text":"p = random(s,f) Swap A[p] and A[f] slide = s -1 For 7y -=\"8\" L0 (=1 16 Ay 2= A|E] slide = slide + 1 Swap A[J] with A[slide] Swap A[f] with A[slide+1] Return slide + 1 <« The index of the pivot","libVersion":"0.3.2","langs":"eng"}

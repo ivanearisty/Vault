@@ -1,0 +1,1 @@
+{"path":"z/z ScreenShots/Screenshot 2024-10-08 at 8.32.13 AM.jpg","text":"Quicksort(A,s,f) if s>f return «—— r = Partition(A,s,f) Quicksort(A,s,r-1) Ouicksort(A,xr+l1,f)","libVersion":"0.3.2","langs":"eng"}

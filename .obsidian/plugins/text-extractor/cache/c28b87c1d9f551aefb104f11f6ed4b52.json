@@ -1,0 +1,1 @@
+{"path":"Screenshot 2025-05-16 at 6.35.18 PM.png","text":"Iptables —P INPUT DROP Iptables —P OUTPUT DROP Iptables ~P FORWARD DROP lfiptables ~A INPUT —j ACCEPT —m contract —ctstate ESTABLISH: lfiptables ~A OUTPUT —j ACCEPT —m contract —ctstate ESTABLIS lliptables ~A FORWARD —j ACCEPT —m contract —ctstate ESTABLISH","libVersion":"0.3.2","langs":"eng"}

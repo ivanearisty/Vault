@@ -1,0 +1,1 @@
+{"path":"z ScreenShots/Screenshot 2024-11-04 at 12.35.00 AM.jpg","text":"= SQL provides a mechanism for the nesting of subqueries. = A subquery is a select-from-where expression that is nested within another query. = A common use of subqueries is to perform tests for set membership, set comparisons, and set cardinality.","libVersion":"0.3.2","langs":"eng"}

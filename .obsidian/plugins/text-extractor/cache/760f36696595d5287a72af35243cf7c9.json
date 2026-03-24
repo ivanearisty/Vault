@@ -1,0 +1,1 @@
+{"path":"Screenshot 2024-11-18 at 12.47.54 AM.jpg","text":"RANK (t,x) rank = 0 while (t # x) if (tkey < xkey) if tleft # NIL rank += t.left.size rank++ t = t.right else t = t.left if tleft |= NIL rank += t.left.size rank++ Return rank","libVersion":"0.3.2","langs":"eng"}

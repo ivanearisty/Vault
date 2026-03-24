@@ -1,0 +1,1 @@
+{"path":"z/z ScreenShots/Screenshot 2024-11-18 at 2.59.22 AM.jpg","text":"Min-IntervalSearch(T,i) =T Initialize min.low =INF while z # NIL if z overlaps with ¢ and z.int.low < min.low min = x if z.left # NIL and z.left.max > i.low x = x.left else x = x.right return min","libVersion":"0.3.2","langs":"eng"}

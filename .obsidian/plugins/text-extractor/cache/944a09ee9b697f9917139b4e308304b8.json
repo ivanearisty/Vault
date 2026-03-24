@@ -1,0 +1,1 @@
+{"path":"Screenshot 2025-03-21 at 5.10.06 PM.jpg","text":"R0 | Seaca Example 0. Given (n,e) and (n,d) as computed above E=5, d=5, n=35 - q.To encrypt message m (<n), compute M=2 c=m€mod n =mA5 mod 35=2/5 mod 35=32 2.To decrypt received bit pattern, ¢, compute m=c9mod n M=32A5mod35=2 N m = (me mod n)d mod n l c","libVersion":"0.3.2","langs":"eng"}

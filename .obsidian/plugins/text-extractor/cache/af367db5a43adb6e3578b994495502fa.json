@@ -1,0 +1,1 @@
+{"path":"z/z ScreenShots/Screenshot 2024-11-04 at 2.42.54 AM.jpg","text":"= Same query as before but with case statement el Lot i update instructor Ehs set salary = case / when salary <= 100000 then salary * 1.05 else salary * 1.03 end","libVersion":"0.3.2","langs":"eng"}

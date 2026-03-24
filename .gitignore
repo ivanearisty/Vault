@@ -1,4 +1,6 @@
-/.obsidian
+# Obsidian - track config but not workspace state
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
 .DS_Store
 Leap
 Classes + Uni/DAA/DAA Book.md

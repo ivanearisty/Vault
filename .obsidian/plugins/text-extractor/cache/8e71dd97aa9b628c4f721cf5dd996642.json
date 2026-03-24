@@ -1,0 +1,1 @@
+{"path":"Screenshot 2024-11-18 at 12.54.20 AM.jpg","text":"BST-Select (k,x) L=1 if (x.left # NIL) L += x.left.size while (L # k) if(k<L) x = xleft else x = x.right k=k-L L=1 i (x.left # NIL) L += xleft.size Return x","libVersion":"0.3.2","langs":"eng"}

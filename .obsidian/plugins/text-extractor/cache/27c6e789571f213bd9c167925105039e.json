@@ -1,0 +1,1 @@
+{"path":"z/z ScreenShots/Screenshot 2024-09-28 at 2.12.42 PM.jpg","text":"classroom(building, room_number, capacity) department(deptname, building, budget) course(course_id, title, credits) instructor(ID, name, salary) student(ID, name, tot cred)","libVersion":"0.3.2","langs":"eng"}

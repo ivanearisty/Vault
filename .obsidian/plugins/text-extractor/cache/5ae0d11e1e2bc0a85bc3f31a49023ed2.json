@@ -1,0 +1,1 @@
+{"path":"z ScreenShots/Screenshot 2024-10-06 at 1.08.57 AM.jpg","text":"Prac'tficel(?,s,f) Practice2(A,s,f) 1 s < Dy ifs< f al = (s +£)/2] . ) if BSearch(A,s,ql,1) = true if Bii?iiﬁ(ﬁijl’f’l) = true return true else else . return Practicel(A, ql+1, f) olse return Practice2(A, s, f-1) clse return false return false","libVersion":"0.3.2","langs":"eng"}

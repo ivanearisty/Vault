@@ -1,0 +1,1 @@
+{"path":"web0nd-notes/z ScreenShots/Screenshot 2024-09-30 at 7.55.51 PM.jpg","text":"+ The sequence just tries the next available spot + Use an initial hash function: h(k) and try this spot first Ex. h(k) =k mod 9 2 E + If that spot is full, try the next adjacent 1 spot! . h(k,i) = (k+i) mod 9 3 E> :","libVersion":"0.3.2","langs":"eng"}

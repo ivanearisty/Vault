@@ -1,0 +1,1 @@
+{"path":"Classes + Uni/DL/HW2/p4_detection_curves.png","text":"FCOS vs RetinaNet on NWPU VHR-10 (seed=1560) Training Loss Validation mAP@0.5 2.2 —e— FCOS —e— FCOS —o— RETINANET | 0.035 —o— RETINANET 2.0 0.030 18 0.025 1.6 0.020 1.4 0.015 12 0.010 10 0.005 0.000 0.8 1.0 15 2.0 2.5 3.0 35 4.0 4.5 5.0 1.0 15 2.0 2.5 3.0 35 4.0 4.5 5.0 Epoch Epoch","libVersion":"0.3.2","langs":"eng"}

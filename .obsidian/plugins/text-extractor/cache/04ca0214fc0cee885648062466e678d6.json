@@ -1,0 +1,1 @@
+{"path":"Screenshot 2024-10-21 at 10.45.36 PM.jpg","text":"Data structure that stores comparable elements: + Numbers, eg. 2 <5 + Words, eg. apple < tree Allows for dynamic operations: + Insert + Delete ‘ + Search The data is almost sorted: + Sorting elements in a BST: O(n) L","libVersion":"0.3.2","langs":"eng"}

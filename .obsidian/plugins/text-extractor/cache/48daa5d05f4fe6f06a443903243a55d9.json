@@ -1,0 +1,1 @@
+{"path":"z ScreenShots/Screenshot 2024-09-27 at 5.58.58 AM.jpg","text":"n A= el () Determine k = log;, a Compare f(n) to n* Case1: f(n)is “much smaller” than n*: f(n) is O(n*~°) T(n) is O(n*) Case2: f(n)is “same order” as n*: f(n) is O(n*) T(n) is ©(n*log n) Case3: f(n)is “much bigger” than n*: f(n) is Q(n**) T(n) is O(f(n))","libVersion":"0.3.2","langs":"eng"}

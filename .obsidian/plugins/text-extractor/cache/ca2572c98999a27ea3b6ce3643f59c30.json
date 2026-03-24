@@ -1,0 +1,1 @@
+{"path":"web0nd-notes/z ScreenShots/Screenshot 2024-11-17 at 11.28.34 PM.jpg","text":"BlackHeight(x) if (x is NilNode) return 0 else a = BlackHeight(x.left) if a = —1 return -1 if (x.left.color = black) at+ b = BlackHeight (x.right) if b= —1 return -1 if (x.right.color = black) b4+ if (a # b) return -1 else return a","libVersion":"0.3.2","langs":"eng"}

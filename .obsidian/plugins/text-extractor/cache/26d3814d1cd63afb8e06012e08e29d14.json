@@ -1,0 +1,1 @@
+{"path":"z/z ScreenShots/Screenshot 2024-11-23 at 10.11.39 PM.jpg","text":"for k = n-1 down to 1 made-swap = false for i =1 to k if A[i+1] < A[i] Swap A[i] and A[i+1] made-swap = true if made-swap = false break","libVersion":"0.3.2","langs":"eng"}

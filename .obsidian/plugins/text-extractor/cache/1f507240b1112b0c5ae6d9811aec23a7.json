@@ -1,0 +1,1 @@
+{"path":"z ScreenShots/Screenshot 2024-11-24 at 1.43.22 AM.jpg","text":"~Goal: Show T(n) < dlogn for some constant d. -Assume for induction that T(n/2) < dlog(n/2) -Substitute : T(n) = T(n/2) +c < dlog(n/2) +c = dlogn — d + ¢ < dlog n where the last step is true as long as d > c. Therefore T(n) is O(log n).","libVersion":"0.3.2","langs":"eng"}

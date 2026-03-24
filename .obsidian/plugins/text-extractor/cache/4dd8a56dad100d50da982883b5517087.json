@@ -1,0 +1,1 @@
+{"path":"web0nd-notes/z ScreenShots/Screenshot 2024-09-27 at 5.44.41 AM.jpg","text":"Fact(n) Recurrence Runtime: if n=1 return 1 () =c¢ else Tn)=Tn-1)+c return n*Fact(n-1) Solve: T(n)=Tn—-1)+c Step1: Need a “guess” for the answer: Tn)=Tn—-1)+c =Tn-2)+c)+c =Tn-2)+2c =(Tn-3)+c)+2c =T(n—3)+ 3¢","libVersion":"0.3.2","langs":"eng"}

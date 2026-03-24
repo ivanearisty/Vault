@@ -1,0 +1,47 @@
+.academia_pdf .cm-content {
+    font-family: “Times New Roman”, Times, serif;
+    font-size: 11.5px;
+    text-indent: 2em;
+    line-height: 2;
+    }
+
+.academia_pdf .cm-content .cm-url {
+    color: red;
+}
+
+.academia_pdf .cm-content .cm-highlight {
+    background: LightSkyBlue;
+}
+
+/* Adjust printing style only to have column output 
+   when the document is tagged with the fontmatter
+   cssclass of 'columns'*/
+@media print {
+    .academia_pdf .cm-content {
+        font-family: “Times New Roman”, Times, serif;
+        font-size: 11.5px;
+        text-indent: 2em;
+        line-height: 2;
+    }
+
+    .academia_pdf .cm-content .cm-url {
+        color: red;
+    }
+
+    .academia_pdf .cm-content .cm-highlight {
+        background: LightSkyBlue;
+    }
+    
+    /* Document title to go across entire page */
+    .academia_pdf h1:first-of-type {
+        column-span: all;
+        text-align: center;
+    }
+
+    /* Content broken up in columns */
+    .academia_pdf .markdown-preview-view {
+        column-count: 2;
+        column-rule: 1px solid #EEE;
+        column-gap: 2em;
+    }
+}

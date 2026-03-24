@@ -1,0 +1,1 @@
+{"path":"z ScreenShots/Screenshot 2024-11-17 at 9.13.24 PM.jpg","text":"TREE-SEARCH(x,k) While z # NIL and k # z.key if k < z.key x = x.left else x = x.right return x Runtime: O(h) where h is the height of the tree.","libVersion":"0.3.2","langs":"eng"}

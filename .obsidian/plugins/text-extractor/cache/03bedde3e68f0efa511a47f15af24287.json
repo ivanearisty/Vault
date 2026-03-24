@@ -1,0 +1,1 @@
+{"path":"z/z ScreenShots/Screenshot 2024-11-04 at 1.42.11 AM.jpg","text":"Find all students who have taken all courses offered in the Biology department. select distinct S.ID, S.name from student as S where not exists ( (select course_id from course where dept_name =’ Biology' ) except (select T.course_id from takesas T where S.ID = T.ID));","libVersion":"0.3.2","langs":"eng"}

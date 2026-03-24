@@ -1,0 +1,1 @@
+{"path":"z ScreenShots/Screenshot 2024-11-04 at 11.38.15 AM.jpg","text":"Customer(phone, blldgNum, street,apt Num) Dish(item, description, category) DishSize(item, size, price) Order(order Num, phone, order Date, status) OrderItems(order Num,item, size, qty)","libVersion":"0.3.2","langs":"eng"}

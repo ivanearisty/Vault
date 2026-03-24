@@ -1,0 +1,1 @@
+{"path":"z/z ScreenShots/Screenshot 2024-09-27 at 5.19.26 AM.jpg","text":"Mergesort(A,s, f) _ Constant time, ¢, if s<f Conquer: T(n/2)+ T(n/2) = 2T(n/2) Mergesort(A,s,q) Mergesort(A,qg+1, f) Combine: Merge: cn Merge(A,s,q, f) TOTAL: T(n) =c,+2T(n/2)+cn =2Tn/2) +cn","libVersion":"0.3.2","langs":"eng"}

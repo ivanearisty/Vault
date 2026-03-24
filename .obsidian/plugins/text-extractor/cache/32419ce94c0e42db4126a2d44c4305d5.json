@@ -1,0 +1,1 @@
+{"path":"web0nd-notes/z ScreenShots/Screenshot 2024-09-27 at 5.46.06 AM.jpg","text":"Step 2: Substitution/induction step: Assume for induction T(n — 1) < d(n — 1) Substitute this into the recursion: Tn)=Tn-1)+c <dmn-1+c =dn+c—-d \\ideC <dn Goal!!!","libVersion":"0.3.2","langs":"eng"}

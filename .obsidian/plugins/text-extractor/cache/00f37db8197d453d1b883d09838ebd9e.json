@@ -1,0 +1,1 @@
+{"path":"z/Screenshot 2025-11-09 at 6.25.29 PM.png","text":"Problem 1. () O B O B 0] ap S S O R O B | a1 o -1 0 --- O as A= . o o o . . 0 -+ 0 -1 0 ap2a [ | N | Compute det(A +¢I). You should get a nice expression involving ag, a1, . . .,an—1 and ¢. Row expansion and induction is probably the best way to go.","libVersion":"0.3.2","langs":"eng"}

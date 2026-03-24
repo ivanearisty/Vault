@@ -1,0 +1,1 @@
+{"path":"z/z ScreenShots/Screenshot 2024-10-13 at 8.53.31 PM.jpg","text":"Problem: Given a list of n numbers, build a heap: SIIIT YR S S MR R N Y Q Solution: 1 + New elements are added in the next leaf position @ e + After each insert: @ o 0 0 + Bubble-up the heap performing swaps until the e o ° heap property is maintained. s o1 ]efs 7 ]s]","libVersion":"0.3.2","langs":"eng"}
